@@ -1,0 +1,22 @@
+-----------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  c:\Users\12559\Desktop\社会调查实践\test_stata_works.log
+  log type:  text
+ opened on:   1 Jan 2025, 00:00:00
+.     di "=== TESTING STATA EXECUTION ==="
+=== TESTING STATA EXECUTION ===
+.     sysuse auto, clear
+(1978 automobile data)
+.     sum price mpg weight
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+       price |         74    6165.257    2949.496       3291      15906
+         mpg |         74     21.2973    5.785503         12         41
+      weight |         74    3019.459    777.1936       1760       4840
+.     log close
+      name:  <unnamed>
+       log:  c:\Users\12559\Desktop\社会调查实践\test_stata_works.log
+  log type:  text
+ closed on:   1 Jan 2025, 00:00:00
+-----------------------------------------------------------------------------------

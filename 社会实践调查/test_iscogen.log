@@ -1,0 +1,44 @@
+-----------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  c:\Users\12559\Desktop\社会调查实践\test_iscogen.log
+  log type:  text
+ opened on:   1 Jan 2025, 00:00:00
+.     di "=== TESTING ISCOGEN ON CGSS2023 ==="
+=== TESTING ISCOGEN ON CGSS2023 ===
+.     use "c:/Users/12559/Desktop/CGSS2023/CGSS2023.dta", clear
+.     keep if isurban == 1 | isurban == 2
+(5,743 observations deleted)
+.     count
+  5,583
+.     recode isco08f (-5/-1 = .)
+(827 changes made to isco08f)
+.     iscogen f_isei = isei(isco08f), from(isco08)
+
+    variable name:          f_isei
+    variable label:         Recode of isco08f: isco08 to isei
+    storage type:           byte
+    matched observations:   4756
+    unmatched observations: 0
+    missing observations:   827
+.     sum f_isei, detail
+
+              Recode of isco08f: isco08 to isei
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%           10             10
+ 5%           10             10
+10%           10             10       Obs               4,756
+25%           10             10       Sum of wgt.       4,756
+
+50%           10                      Mean           22.01787
+                        Largest       Std. dev.      18.64864
+75%           33             89
+90%           53             89       Variance       347.7719
+95%           63             89       Skewness       1.485299
+99%           88             89       Kurtosis       4.349251
+.     log close
+      name:  <unnamed>
+       log:  c:\Users\12559\Desktop\社会调查实践\test_iscogen.log
+  log type:  text
+ closed on:   1 Jan 2025, 00:00:00
+-----------------------------------------------------------------------------------
